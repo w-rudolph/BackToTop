@@ -1,0 +1,16 @@
+#backtotop{
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  background: #777;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+body{
+  background: #F1E2E2;
+}
