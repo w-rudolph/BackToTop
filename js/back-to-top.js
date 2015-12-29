@@ -9,17 +9,14 @@
 		
 		var _layoutInit = function(){
 		  
-		  var  $_btt = $('<div id="backtotop" style="display:none"></div>');
+		  var  $_btt = $('<div id="backtotop"></div>');
 		  if(options.model[0] == 'text'){
 			  $_btt.addClass('btt-text');
 			  $_btt.html(options.model[1])
 		  }else if(options.model[0] == 'image'){
+			
+			   $_btt = $('<div id="backtotop"><img src="'+options.model[1]+'"/></div>');
 			   $_btt.addClass('btt-image');
-			   if(options.model[1]){
-				   $_btt.css({'background-image': 'url('+options.model[1]+')','background-position':'50% 50%'}); 
-			   }else{
-			   $_btt.css({'background-image': 'url(./image/backtotop2x.png)','background-position':'50% 50%'}); 
-			   }
 		  }else{
 			  return false;
 		  }
@@ -29,9 +26,9 @@
 	    };
 		var _animation = function(){
 		  var $btt = $('#backtotop');
-		
 		  $(window).scroll(function() {
-				if($(this).scrollTop() >= $(document).height() - $(this).height()) {
+				//if($(this).scrollTop() >= $(document).height() - $(this).height()) {
+			    if($(this).scrollTop() >= 200) {
 					$btt.fadeIn();	
 				} else {
 					$btt.fadeOut();
@@ -51,4 +48,4 @@
 		_animation();
 	}
   });
-})(jQuery)
+})(jQuery);

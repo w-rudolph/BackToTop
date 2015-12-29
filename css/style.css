@@ -9,8 +9,13 @@
   -ms-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
+  display: none;
 }
 
 body{
   background: #F1E2E2;
+}
+#backtotop img{
+  width: 60px;
+  height: 60px;
 }
